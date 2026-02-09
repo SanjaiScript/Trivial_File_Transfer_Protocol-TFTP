@@ -5,15 +5,15 @@ A robust implementation of the Trivial File Transfer Protocol (TFTP) written in 
 ##  Features
 - **Operation Support:** Full implementation of `RRQ` (Read) and `WRQ` (Write).
 - **Mode Selection:**
-    - **Netascii (Mode 0):** Automatic translation between Unix (`\n`) and Network (`\r\n`) newlines.
     - **Default (Mode 1):** Standard 512-byte block transfers.
     - **Octet (Mode 2):** Custom 1-byte block transfers for specific data integrity testing.
+    - **Netascii (Mode 3):** Automatic translation between Unix (`\n`) and Network (`\r\n`) newlines.
 - **Reliability:** Stop-and-wait acknowledgment (ACK) system.
 - **Clean Exit:** Graceful client disconnection and socket cleanup.
 
 ## Client Menu
 1. **Connect:** Initialize the socket to the server.
-2. **Mode:** Select between Netascii (0), Default (1), or Octet (2).
+2. **Mode:** Select between Default (1), Octet (2) or Netascii (3).
 3. **Put:** Upload a local file to the server.
 4. **Get:** Download a file from the server.
 5. **Exit:** Disconnect and close the program.
